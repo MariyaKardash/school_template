@@ -1,1 +1,1 @@
-## Template for repositories with home works of pro course students
+My name is Maria. I study at BSUIR and I love cats)
