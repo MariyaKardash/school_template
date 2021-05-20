@@ -17,6 +17,7 @@ Builder.prototype.plus = function (...args) {
 /* Child class ES5 */
 
 function IntBuilder(int = 0) {
+  Builder.call(this, int)
   this.value = int
 }
 
@@ -71,8 +72,7 @@ intBuilder
 
 class StringBuilder extends Builder {
   constructor(str = '') {
-    super()
-    this.value = str
+    super(str)
   }
 
   minus(n) {
