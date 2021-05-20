@@ -18,7 +18,6 @@ Builder.prototype.plus = function (...args) {
 
 function IntBuilder(int = 0) {
   Builder.call(this, int)
-  this.value = int
 }
 
 IntBuilder.prototype = Object.create(Builder.prototype)
