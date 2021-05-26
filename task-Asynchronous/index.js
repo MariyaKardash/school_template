@@ -32,6 +32,8 @@ const renderMain = () => {
 
 /* Function for rendering weather div */
 const renderWeather = (data) => {
+  const weatherContainer = document.getElementById('weatherContainer')
+
   const location = document.createElement('p')
   const temperature = document.createElement('p')
   const time = document.createElement('p')
@@ -51,13 +53,13 @@ const renderWeather = (data) => {
   speed.innerText = `Speed: ${data.current.wind_speed}`
   description.innerText = data.current.weather_descriptions
 
-  document.getElementById('weatherContainer').appendChild(temperature)
-  document.getElementById('weatherContainer').appendChild(location)
-  document.getElementById('weatherContainer').appendChild(time)
-  document.getElementById('weatherContainer').appendChild(wind)
-  document.getElementById('weatherContainer').appendChild(feelsLike)
-  document.getElementById('weatherContainer').appendChild(speed)
-  document.getElementById('weatherContainer').appendChild(description)
+  weatherContainer.appendChild(temperature)
+  weatherContainer.appendChild(location)
+  weatherContainer.appendChild(time)
+  weatherContainer.appendChild(wind)
+  weatherContainer.appendChild(feelsLike)
+  weatherContainer.appendChild(speed)
+  weatherContainer.appendChild(description)
 }
 
 function cleanWeather() {
