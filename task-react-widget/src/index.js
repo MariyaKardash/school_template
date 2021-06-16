@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import CurrencyExchange from './CurrencyExchange.jsx';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import Router from './Router.jsx'
 
 ReactDOM.render(
-  <CurrencyExchange />,
+  <Router />,
   document.getElementById('root')
 );

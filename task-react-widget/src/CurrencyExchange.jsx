@@ -1,9 +1,9 @@
 import React from 'react'
-import CurrencyForm from './CurrencyForm';
+import CurrencyForm from './CurrencyForm'
 
 class CurrencyExchange extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             options: [],
             base: 'EUR',
@@ -46,6 +46,12 @@ class CurrencyExchange extends React.Component {
 
     componentDidMount() {
         this.getFetchData()
+        if(this.props.match.params.base) {
+            this.setState({
+                base: this.props.match.params.base,
+                convertTo: this.props.match.params.convertTo,
+            })
+        }
     }
 
     onChange = (e) => {
